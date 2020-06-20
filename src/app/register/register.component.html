@@ -4,6 +4,13 @@
         <img class="user-register" src="/assets/images/register.jpeg">
     </div>
     <div class="col-sm-7">
+
+      <div *ngIf="loading" class="d-flex justify-content-center spinner-content">
+        <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+
         <h2 class="text-center heading">Register</h2>
         <form class="user"  [formGroup]="registerForm" (ngSubmit)="submit()">
             <div class="form-group row">

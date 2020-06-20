@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import '~ngx-toastr/toastr';
+
 
 body{
     background-color: #ebeceb
@@ -27,5 +29,19 @@ body{
     }
     button{
         margin-top: 2rem;
+    }
+}
+
+
+.spinner-content{
+    height: -webkit-fill-available;
+    position: absolute;
+    // left: 45%;
+    // top: 45%;
+    width: 100%;
+    z-index: 1000;
+    // background: rgba(127,127,127,0.7);
+    .spinner-border{
+        margin: 13rem auto;
     }
 }

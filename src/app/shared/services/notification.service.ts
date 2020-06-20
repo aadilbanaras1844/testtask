@@ -5,18 +5,18 @@ import { ToastrService } from 'ngx-toastr';
   providedIn: 'root'
 })
 export class NotificationService {
-  
+
   constructor(
     private toastr: ToastrService,
   ) { }
 
-  success(message){
+  success(message) {
     this.toastr.success(message, 'Success!');
   }
-  error(message){
+  error(message) {
     this.toastr.error(message, 'Error!');
   }
-  warning(heading, message){
+  warning(heading, message) {
     this.toastr.warning('Hello world!', 'Toastr fun!');
   }
 
