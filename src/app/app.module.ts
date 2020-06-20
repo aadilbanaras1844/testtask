@@ -10,13 +10,15 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { ProfileComponent } from './profile/profile.component';
 import { PipesModule } from './shared/pipes';
+import { DynamicuserComponent } from './dynamicuser/dynamicuser.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    ProfileComponent
+    ProfileComponent,
+    DynamicuserComponent
   ],
   imports: [
     BrowserModule,

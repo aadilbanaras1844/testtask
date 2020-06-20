@@ -1,19 +1,23 @@
 
 
-<h2>
-    Welcome
-</h2>
-
-<p>
-    Username => {{ authService.currentUserValue.username }}
-</p>
-
-<p>
-    Name => {{ authService.currentUserValue.name }}
-</p>
-
-
-<p>
-    Custom Pipe output from User Object =>
-    {{ authService.currentUserValue | userPipe }}
-</p>
+<div class="row">
+    <div class="col-sm-6">
+        <h2>
+            Welcome
+        </h2>
+        
+        <p>
+            Username => {{ authService.currentUserValue.username }}
+        </p>
+        
+        <p>
+            Name => {{ authService.currentUserValue.name }}
+        </p>
+        
+        
+        <p>
+            Custom Pipe output from User Object =>
+            {{ authService.currentUserValue | userPipe }}
+        </p>
+    </div>
+</div>
