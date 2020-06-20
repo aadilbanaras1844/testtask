@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+body{
+    background-color: #ebeceb
+}
+
+.user-register{
+    background: url("/assets/images/register.jpeg");
+    // background-position: center;
+    // background-size: cover;
+  }
+
+
+.user-form{
+    height: 30rem;
+    img{
+        max-width: 100%;
+        width: 100%;
+        height: -webkit-fill-available;
+    }
+    .heading{
+        margin-bottom: 2rem;
+    }
+    input{
+        margin-bottom: 1rem;
+    }
+    button{
+        margin-top: 2rem;
+    }
+}
