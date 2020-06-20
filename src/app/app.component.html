@@ -11,14 +11,18 @@
           <a class="nav-link"  routerLink="/">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"  routerLink="/login">Login</a>
+          <a class="nav-link" *ngIf="!authService.currentUserValue" routerLink="/login">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"  routerLink="/register">Register</a>
+          <a class="nav-link" *ngIf="!authService.currentUserValue" routerLink="/register">Register</a>
+        </li>
+        <li class="nav-item" *ngIf="authService.currentUserValue">
+          <a class="nav-link"  routerLink="/profile">Profile</a>
         </li>
       </ul>
-      <span class="navbar-text">
-        Navbar text with an inline element
+      
+      <span *ngIf="authService.currentUserValue" class="navbar-text logout" (click)="logout()">
+        Logout
       </span>
     </div>
   </nav>
