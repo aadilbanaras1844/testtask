@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
+  submitted:Boolean = false;
   loginForm = this.fb.group({
     username: ['', [Validators.required]],
     password: ['', [Validators.required]],
@@ -27,6 +28,8 @@ export class LoginComponent implements OnInit {
   }
 
   submit(){
+
+    this.submitted = true;
     if(this.loginForm.invalid){
       this.notificationService.error('Form status, Invalid');
       return;

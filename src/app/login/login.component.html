@@ -12,12 +12,12 @@
         <h2 class="text-center heading">Login</h2>
         <form class="user"  [formGroup]="loginForm" (ngSubmit)="submit()">
             <div class="form-group row">
-                <div class="col-sm-12 ">
+                <div class="col-sm-12"  [ngClass]="submitted && loginForm.controls['username'].invalid? 'error': ''">
                     <input  formControlName="username" type="text" class="form-control form-control-user" placeholder="UserName">
               </div>
             </div>
             <div class="form-group row">
-              <div class="col-sm-12 ">
+              <div class="col-sm-12"  [ngClass]="submitted && loginForm.controls['password'].invalid? 'error': ''">
                 <input formControlName="password" type="password" class="form-control form-control-user" placeholder="Password">
               </div>
             </div>

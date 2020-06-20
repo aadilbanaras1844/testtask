@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class RegisterComponent implements OnInit {
 
   loading:Boolean = false;
+  submitted:Boolean = false;
   registerForm = this.fb.group({
     image: ['', [Validators.required]],
     name: ['', [Validators.required]],
@@ -30,6 +31,8 @@ export class RegisterComponent implements OnInit {
   }
 
   submit(){
+
+    this.submitted = true;
     if(this.registerForm.invalid){
       this.notificationService.error('Form status, Invalid');
       return;
